@@ -18,12 +18,44 @@
   revision = "c5a927568de7aad8a58127d80bcd36ca4e71e454"
 
 [[projects]]
+  digest = "1:573fa46f8d413d4bc3f7cc5e86b2c43cb21559f4fb0a19d9874d228e28fdc07c"
+  name = "github.com/PuerkitoBio/goquery"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "2d2796f41742ece03e8086188fa4db16a3a0b458"
+  version = "v1.5.0"
+
+[[projects]]
+  digest = "1:87c2e02fb01c27060ccc5ba7c5a407cc91147726f8f40b70cceeedbc52b1f3a8"
+  name = "github.com/Sirupsen/logrus"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "e1e72e9de974bd926e5c56f83753fba2df402ce5"
+  version = "v1.3.0"
+
+[[projects]]
+  digest = "1:66b3310cf22cdc96c35ef84ede4f7b9b370971c4025f394c89a2638729653b11"
+  name = "github.com/andybalholm/cascadia"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "901648c87902174f774fac311d7f176f8647bdaa"
+  version = "v1.0.0"
+
+[[projects]]
   branch = "master"
   digest = "1:863cb3d06b96794fd14a54579116b7e704cd8bc395e9d0404a5ad236d3e198b4"
   name = "github.com/azr/backoff"
   packages = ["."]
   pruneopts = "UT"
   revision = "53511d3c733003985b0b76f733df1f4d0095ee6a"
+
+[[projects]]
+  branch = "master"
+  digest = "1:891fcfe9d7db88459b4582a52fcba2f8a6da8065700902e09813ea01bd7d4c17"
+  name = "github.com/djimenez/iconv-go"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "8960e66bd3dacbc8773962b40eb82fc18c63c127"
 
 [[projects]]
   branch = "master"
@@ -50,16 +82,78 @@
   revision = "bca2e7f09a178fd36b034107a00e2323bca6a82e"
 
 [[projects]]
+  digest = "1:d4e6e8584d0a94ce567d237e19192dae44d57d2767ac7e1d7fbf5626d176381a"
+  name = "github.com/jinzhu/gorm"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "472c70caa40267cb89fd8facb07fe6454b578626"
+  version = "v1.9.2"
+
+[[projects]]
   branch = "master"
-  digest = "1:76ee51c3f468493aff39dbacc401e8831fbb765104cbf613b89bef01cf4bad70"
+  digest = "1:fd97437fbb6b7dce04132cf06775bd258cce305c44add58eb55ca86c6c325160"
+  name = "github.com/jinzhu/inflection"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "04140366298a54a039076d798123ffa108fff46c"
+
+[[projects]]
+  digest = "1:0a69a1c0db3591fcefb47f115b224592c8dfa4368b7ba9fae509d5e16cdc95c8"
+  name = "github.com/konsorten/go-windows-terminal-sequences"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "5c8c8bd35d3832f5d134ae1e1e375b69a4d25242"
+  version = "v1.0.1"
+
+[[projects]]
+  digest = "1:cc9f0c72e45707522afc156b3d715443e2021acedff165a4803f72a0d2ed170f"
+  name = "github.com/matryer/try"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "312d2599e12e89ca89b52a09597394f449235d80"
+  version = "v1"
+
+[[projects]]
+  branch = "master"
+  digest = "1:38f553aff0273ad6f367cb0a0f8b6eecbaef8dc6cb8b50e57b6a81c1d5b1e332"
+  name = "golang.org/x/crypto"
+  packages = ["ssh/terminal"]
+  pruneopts = "UT"
+  revision = "ff983b9c42bc9fbf91556e191cc8efb585c16908"
+
+[[projects]]
+  branch = "master"
+  digest = "1:17847c677cb69303e0b8606b690f400c53485620a98d288aee1a215235118fcb"
   name = "golang.org/x/net"
-  packages = ["context"]
+  packages = [
+    "context",
+    "html",
+    "html/atom",
+  ]
   pruneopts = "UT"
   revision = "927f97764cc334a6575f4b7a1584a147864d5723"
+
+[[projects]]
+  branch = "master"
+  digest = "1:5ee4df7ab18e945607ac822de8d10b180baea263b5e8676a1041727543b9c1e4"
+  name = "golang.org/x/sys"
+  packages = [
+    "unix",
+    "windows",
+  ]
+  pruneopts = "UT"
+  revision = "48ac38b7c8cbedd50b1613c0fccacfc7d88dfcdf"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/ChimeraCoder/anaconda"]
+  input-imports = [
+    "github.com/ChimeraCoder/anaconda",
+    "github.com/PuerkitoBio/goquery",
+    "github.com/Sirupsen/logrus",
+    "github.com/djimenez/iconv-go",
+    "github.com/jinzhu/gorm",
+    "github.com/matryer/try",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
