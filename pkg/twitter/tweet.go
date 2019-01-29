@@ -7,11 +7,11 @@ import (
 	"github.com/eferhatg/hayri-irdal/pkg/models"
 )
 
-type TwDeputy struct {
-	Deputy *models.Deputy
+type TwTweet struct {
+	Tweet *models.Tweet
 }
 
-func (twd *TwDeputy) GetUserProfile(api *anaconda.TwitterApi) error {
+func (twd *TwDeputy) GetUserTweets(api *anaconda.TwitterApi) error {
 	user, err := api.GetUsersShow(twd.Deputy.TwLink, nil)
 	if err != nil {
 

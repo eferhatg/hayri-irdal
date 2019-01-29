@@ -44,6 +44,7 @@ type Deputy struct {
 	TwProfileBackgroundImage string    `gorm:"column:tw_profile_background_image_url_https"`
 	TwProfileImage           string    `gorm:"column:tw_profile_image_url_https"`
 	TwCreatedAt              time.Time `gorm:"column:tw_created_at"`
+	TwId                     int64     `gorm:"column:tw_id"`
 }
 
 //Upsert inserting deputy if not found in db

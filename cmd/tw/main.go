@@ -1,7 +1,9 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"net/url"
 	"os"
 
 	"github.com/ChimeraCoder/anaconda"
@@ -23,7 +25,8 @@ func main() {
 	db.AutoMigrate(&models.Deputy{})
 	log.SetLevel(log.DebugLevel)
 	fetchUserProfiles(api, db)
-	fmt.Println("--------------------")
+	// fmt.Println("--------------------")
+	//fetchUserTweets(api, db)
 }
 
 func fetchUserProfiles(api *anaconda.TwitterApi, db *gorm.DB) {
@@ -44,4 +47,21 @@ func fetchUserProfiles(api *anaconda.TwitterApi, db *gorm.DB) {
 		log.Info("Saved ", twd.Deputy.TwLink)
 
 	}
+}
+
+func fetchUserTweets(api *anaconda.TwitterApi, db *gorm.DB) {
+	v := url.Values{}
+	v.Set("screen_name", "aysesibelersoy")
+	v.Set("count", "3")
+	v.Set("trim_user", "true")
+	v.Set("exclude_replies", "true")
+	v.Set("include_rts", "true")
+	ut, err := api.GetUserTimeline(v)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	b, _ := json.Marshal(ut)
+	fmt.Println(string(b))
+
 }
